@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Open Project Directory",
+        "command": "open_project_directory"
+    }
+]
