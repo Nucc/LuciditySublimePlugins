@@ -8,7 +8,7 @@ class OpenProjectDirectory(sublime_plugin.TextCommand):
   dirs = []
 
   def run(self, edit):
-    self.path = self.settings.get("project_root")
+    self.path = self.settings.get("project_root") or "/Users/nucc/Works"
     self.dirs = [ filename for filename in os.listdir(self.path) if os.path.isdir( os.path.join(self.path, filename) ) ]
     sublime.active_window().show_quick_panel(self.dirs, self.valueIsSelected)
 
